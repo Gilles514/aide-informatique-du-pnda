@@ -1,0 +1,442 @@
+object Form1: TForm1
+  Left = 501
+  Height = 661
+  Top = 246
+  Width = 1041
+  Caption = 'Inventaire Coba'
+  ClientHeight = 661
+  ClientWidth = 1041
+  DesignTimePPI = 120
+  OnActivate = FormActivate
+  LCLVersion = '3.4.0.0'
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 330
+    Top = 0
+    Width = 1041
+    ActivePage = TabSheet2
+    Align = alTop
+    Font.Height = -20
+    ParentFont = False
+    TabIndex = 1
+    TabOrder = 0
+    OnChange = PageControl1Change
+    object TabSheet1: TTabSheet
+      Caption = 'Options'
+      ClientHeight = 289
+      ClientWidth = 1033
+      object cbCategorie: TComboBox
+        Left = 230
+        Height = 36
+        Top = 30
+        Width = 125
+        Font.Height = -20
+        ItemHeight = 28
+        ParentFont = False
+        TabOrder = 0
+        Text = 'Catégories'
+      end
+      object Label1: TLabel
+        Left = 130
+        Height = 28
+        Top = 35
+        Width = 94
+        Caption = 'Catégorie :'
+        Font.Height = -20
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label2: TLabel
+        Left = 530
+        Height = 28
+        Top = 35
+        Width = 185
+        Caption = 'Unité administrative :'
+        Font.Height = -20
+        ParentColor = False
+        ParentFont = False
+      end
+      object cbUA: TComboBox
+        Left = 720
+        Height = 36
+        Top = 30
+        Width = 125
+        Font.Height = -20
+        ItemHeight = 28
+        ParentFont = False
+        TabOrder = 1
+        Text = 'Unités Adm.'
+      end
+      object GroupBox1: TGroupBox
+        Left = 0
+        Height = 216
+        Top = 84
+        Width = 1031
+        Caption = 'Sélection de la cote'
+        ClientHeight = 183
+        ClientWidth = 1027
+        Font.Height = -20
+        ParentFont = False
+        TabOrder = 2
+        object Label3: TLabel
+          Left = 130
+          Height = 28
+          Top = 35
+          Width = 258
+          Caption = 'Cote plus grande ou égale à : '
+          Font.Height = -20
+          ParentColor = False
+          ParentFont = False
+        end
+        object eCoteInferieure: TEdit
+          Left = 390
+          Height = 36
+          Top = 30
+          Width = 100
+          Font.Height = -20
+          ParentFont = False
+          TabOrder = 0
+          Text = '0'
+          OnKeyPress = eCoteInferieureKeyPress
+        end
+        object Label4: TLabel
+          Left = 530
+          Height = 28
+          Top = 35
+          Width = 267
+          Caption = 'ET Cote plus petite ou égale à :'
+          Font.Height = -20
+          ParentColor = False
+          ParentFont = False
+        end
+        object eCoteSuperieure: TEdit
+          Left = 800
+          Height = 36
+          Top = 30
+          Width = 100
+          Font.Height = -20
+          ParentFont = False
+          TabOrder = 1
+          Text = 'ZZZ'
+          OnKeyPress = eCoteSuperieureKeyPress
+        end
+        object Label5: TLabel
+          Left = 130
+          Height = 28
+          Top = 105
+          Width = 249
+          Caption = 'OU BIEN Cote débutant par :'
+          Font.Height = -20
+          ParentColor = False
+          ParentFont = False
+        end
+        object eCoteDebutantPar: TEdit
+          Left = 390
+          Height = 36
+          Top = 100
+          Width = 100
+          Font.Height = -20
+          ParentFont = False
+          TabOrder = 2
+          Text = '8'
+          OnKeyPress = eCoteDebutantParKeyPress
+        end
+        object Label10: TLabel
+          Left = 110
+          Height = 54
+          Top = 10
+          Width = 15
+          Caption = '('
+          Font.Height = -40
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label11: TLabel
+          Left = 910
+          Height = 54
+          Top = 10
+          Width = 15
+          Caption = ')'
+          Font.Height = -40
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Saisie des codes barres'
+      ClientHeight = 289
+      ClientWidth = 1033
+      Font.Color = clBlack
+      Font.Height = -20
+      ParentFont = False
+      object Label6: TLabel
+        Left = 305
+        Height = 28
+        Top = 35
+        Width = 214
+        Caption = 'Code barres exemplaire :'
+        ParentColor = False
+      end
+      object eCodeExemplaireSaisi: TEdit
+        Left = 545
+        Height = 36
+        Top = 30
+        Width = 190
+        TabOrder = 0
+        Text = 'B020019'
+        OnKeyPress = eCodeExemplaireSaisiKeyPress
+      end
+      object Label7: TLabel
+        Left = 120
+        Height = 28
+        Top = 92
+        Width = 48
+        Caption = 'Titre :'
+        Font.Height = -20
+        Font.Style = [fsUnderline]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label8: TLabel
+        Left = 49
+        Height = 28
+        Top = 130
+        Width = 118
+        Caption = 'Responsable :'
+        Font.Height = -20
+        Font.Style = [fsUnderline]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label9: TLabel
+        Left = 60
+        Height = 28
+        Top = 170
+        Width = 105
+        Caption = 'Remarques :'
+        Font.Height = -20
+        Font.Style = [fsUnderline]
+        ParentColor = False
+        ParentFont = False
+      end
+      object lTitre: TLabel
+        Left = 192
+        Height = 28
+        Top = 92
+        Width = 208
+        Caption = '....................................................'
+        ParentColor = False
+      end
+      object lAuteur: TLabel
+        Left = 192
+        Height = 28
+        Top = 130
+        Width = 208
+        Caption = '....................................................'
+        ParentColor = False
+      end
+      object mRemarques: TMemo
+        Left = 192
+        Height = 112
+        Top = 170
+        Width = 788
+        Lines.Strings = (
+          'RAS'
+        )
+        TabOrder = 1
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'Importation'
+      ClientHeight = 289
+      ClientWidth = 1033
+      object Button1: TButton
+        Left = 55
+        Height = 31
+        Top = 40
+        Width = 215
+        Caption = 'Sélection du fichier CSV'
+        TabOrder = 0
+        OnClick = Button1Click
+      end
+      object Label_Fichier_CSV: TLabel
+        Left = 320
+        Height = 28
+        Top = 45
+        Width = 330
+        Caption = 'Sélectionner un fichier CSV à importer'
+        ParentColor = False
+      end
+      object StringGrid1: TStringGrid
+        Left = 0
+        Height = 198
+        Top = 91
+        Width = 1033
+        Align = alBottom
+        ColCount = 1
+        ColumnClickSorts = True
+        FixedCols = 0
+        FixedRows = 0
+        HeaderPushZones = []
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goDblClickAutoSize, goSmoothScroll]
+        RowCount = 1
+        TabOrder = 1
+        TitleFont.Height = -20
+      end
+      object Label12: TLabel
+        Left = 318
+        Height = 28
+        Top = 14
+        Width = 183
+        Caption = 'Nombre de colonnes'
+        ParentColor = False
+      end
+      object Button_Importer: TButton
+        Left = 830
+        Height = 31
+        Top = 40
+        Width = 94
+        Caption = 'Importer'
+        TabOrder = 2
+        Visible = False
+        OnClick = Button_ImporterClick
+      end
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 331
+    Top = 330
+    Width = 1041
+    Align = alClient
+    ClientHeight = 331
+    ClientWidth = 1041
+    Color = 16777041
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 1
+    object pbProgressionInventaire: TProgressBar
+      Left = 200
+      Height = 25
+      Top = 50
+      Width = 790
+      ParentShowHint = False
+      Position = 25
+      TabOrder = 0
+      BarShowText = True
+    end
+    object lProgressionInventaire: TLabel
+      Left = 200
+      Height = 28
+      Top = 10
+      Width = 183
+      Caption = 'Progression globale :'
+      Font.Height = -20
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object IBConnection1: TIBConnection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'c:\inventaire\INVENTAIRE_COBA.FDB'
+    KeepConnection = False
+    Password = 'pnda5680'
+    Transaction = SQLTransaction1
+    UserName = 'SYSDBA'
+    HostName = '192.168.220.245'
+    CheckTransactionParams = False
+    UseConnectionCharSetIfNone = False
+    Left = 830
+    Top = 610
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Action = caNone
+    Database = IBConnection1
+    Left = 940
+    Top = 610
+  end
+  object SQLSelect: TSQLQuery
+    PacketRecords = 1
+    UniDirectional = True
+    FieldDefs = <    
+      item
+        Name = 'CATEGORIE'
+        DataType = ftString
+        Precision = -1
+        Size = 100
+      end>
+    Database = IBConnection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select distinct categorie from notices'
+      'where categorie is not null;'
+    )
+    Params = <>
+    Macros = <>
+    Left = 290
+    Top = 610
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLSelect
+    Left = 410
+    Top = 610
+  end
+  object SQLUpdate: TSQLQuery
+    PacketRecords = 1
+    FieldDefs = <    
+      item
+        Name = 'CATEGORIE'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end    
+      item
+        Name = 'UA'
+        DataType = ftString
+        Precision = -1
+        Size = 25
+      end>
+    Database = IBConnection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select distinct categorie from notices'
+      'where categorie is not null;'
+    )
+    UpdateSQL.Strings = (
+      'UPDATE EXEMPLAIRES SET DATEINVENTAIRE = :dDATEINVENTAIRE where ID_EXEMPLAIRE =  ''B020019'''
+    )
+    Params = <>
+    Macros = <>
+    Left = 560
+    Top = 610
+  end
+  object DataSource2: TDataSource
+    DataSet = SQLUpdate
+    Left = 700
+    Top = 610
+  end
+  object CSVDataset1: TCSVDataset
+    PacketRecords = 1
+    UniDirectional = True
+    FieldDefs = <>
+    ReadOnly = True
+    CSVOptions.FirstLineAsFieldNames = True
+    CSVOptions.DefaultFieldLength = 255
+    CSVOptions.Delimiter = ','
+    CSVOptions.QuoteChar = '"'
+    CSVOptions.LineEnding = #13#10'CRLF'
+    CSVOptions.IgnoreOuterWhitespace = True
+    CSVOptions.QuoteOuterWhitespace = True
+    Left = 543
+    Top = 485
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 410
+    Top = 485
+  end
+end
